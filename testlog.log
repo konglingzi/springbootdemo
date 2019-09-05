@@ -1,0 +1,15 @@
+2019-09-02 12:09:52.507  INFO 3664 --- [restartedMain] com.example.Demospringboot2Application   : Starting Demospringboot2Application on DESKTOP-FS9ANB0 with PID 3664 (D:\JavaWorkSpaces\IDEA_Code2019_332\demospringboot2\target\classes started by Ray in D:\JavaWorkSpaces\IDEA_Code2019_332\demospringboot2)
+2019-09-02 12:09:52.511  INFO 3664 --- [restartedMain] com.example.Demospringboot2Application   : The following profiles are active: dev
+2019-09-02 12:09:52.585  INFO 3664 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-09-02 12:09:52.585  INFO 3664 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-09-02 12:09:53.806  INFO 3664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-09-02 12:09:53.825  INFO 3664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-09-02 12:09:53.826  INFO 3664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-09-02 12:09:53.909  INFO 3664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/dev]    : Initializing Spring embedded WebApplicationContext
+2019-09-02 12:09:53.910  INFO 3664 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1320 ms
+2019-09-02 12:09:53.990  INFO 3664 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-09-02 12:09:54.008  INFO 3664 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2019-09-02 12:09:54.377  INFO 3664 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-09-02 12:09:54.530  INFO 3664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-09-02 12:09:54.577  INFO 3664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/dev'
+2019-09-02 12:09:54.580  INFO 3664 --- [restartedMain] com.example.Demospringboot2Application   : Started Demospringboot2Application in 2.561 seconds (JVM running for 3.417)

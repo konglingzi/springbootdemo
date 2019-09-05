@@ -1,0 +1,89 @@
+#全局配置
+spring:
+ profiles:
+  active: dev #使用指定配置文件
+---
+#开发环境配置
+spring:
+  profiles: dev
+  datasource:
+   driver-class-name: com.mysql.cj.jdbc.Driver
+   url: jdbc:mysql://127.0.0.1:3306/itripdb?serverTimezone=Asia/Shanghai
+   username: root
+   password: 123 #指明使用c3p0数据源
+   type: com.mchange.v2.c3p0.ComboPooledDataSource
+  redis:
+   host: 127.0.0.1
+   port: 6379
+   password: 123
+   database: 0
+   jedis:
+    pool:
+     max-idle: 300
+     max-active: 300
+     max-wait: 1000
+  data:
+    solr:
+      host: http://127.0.0.1:8080/solr
+  mvc:
+   static-path-pattern: /** #映射路径
+#   会被处理的静态资源路径
+  resources:
+   static-locations: classpath:/demo/,classpath:/META-INFO/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+  thymeleaf:
+   prefix: classpath:/templates/
+   suffix: .html
+
+server:
+  port: 8080
+#  servlet:
+#    context-path: /dev
+user:
+  username: jerry
+  password: 123123
+mybatis:
+ mapper-locations: classpath:com/example/dao/*.xml #扫描mapper映射文件的位置
+ type-aliases-package: com.example.beans #实体类别名
+#默认logback日志配置
+logging:
+# path: /  #日志文件路径
+# file: testlog.log  #日志文件名称
+# config: #指定详细日志配置文件
+# pattern:
+#  console: "%d{HH:mm:ss.SSS} hello [%thread] %-5level %logger{36} - %msg%n"
+
+
+---
+#生成环境配置
+spring:
+  profiles: pro
+  datasource:
+   driver-class-name: com.mysql.cj.jdbc.Driver
+   url: jdbc:mysql://127.0.0.1:3306/itripdb?serverTimezone=GMT%2B8
+   username: root
+   password: 123
+   type: com.alibaba.druid.pool.DruidDataSource
+server:
+  port: 80
+  servlet:
+    context-path: /pro
+user:
+  username: lucy
+  password: 4563465
+mybatis:
+ mapper-locations: classpath:com/example/dao/*.xml
+ type-aliases-package: com.example.beans
+---
+#测试环境配置
+spring:
+ profiles: test
+ datasource:
+  url: jdbc:mysql://127.0.0.1:3306/itripdb
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  username: root
+  password: 123
+server:
+ port: 80
+user:
+ username: lucy
+ password: 4563465
