@@ -10,5 +10,6 @@ public class MastController {
     @RequestMapping("/showhello")
     public void show(){
         System.out.println("hello show  master");
+        System.out.println("hello show  master123");
     }
 }
