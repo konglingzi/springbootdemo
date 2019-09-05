@@ -16,5 +16,7 @@ public class MastController {
     @RequestMapping("/demo")
     public void demo(){
         System.out.println("dmeo 123");
+        System.out.println("dmeo 456 tom");
+
     }
 }
